@@ -1,0 +1,6 @@
+{
+  "name": "Cryptox Hero",
+  "description": "A dark-themed hero section for a crypto trading platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

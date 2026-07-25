@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>AeroTravel — Premium Flight Experiences & Global Destinations</title>
+  <meta name="title" content="AeroTravel — Premium Flight Experiences & Global Destinations">
+  <meta name="description" content="Discover unforgettable international destinations, luxury flight bookings, and seamless travel experiences with AeroTravel. Book flights to London, Paris, Tokyo, Dubai and beyond.">
+  <meta name="keywords" content="AeroTravel, luxury flight booking, airline tickets, travel destinations, London flights, Paris flights, Tokyo flights, Dubai travel, first class flights, airport transfers">
+  <meta name="author" content="AeroTravel Aviation">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://aerotravel.com/">
+
+  <!-- Open Graph / Facebook SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aerotravel.com/">
+  <meta property="og:title" content="AeroTravel — Premium Flight Experiences & Global Destinations">
+  <meta property="og:description" content="Discover unforgettable international destinations, luxury flight bookings, and seamless travel experiences with AeroTravel.">
+  <meta property="og:site_name" content="AeroTravel">
+  <meta property="og:image" content="Pictures/Images cityies/London.png">
+
+  <!-- Twitter SEO -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aerotravel.com/">
+  <meta property="twitter:title" content="AeroTravel — Premium Flight Experiences & Global Destinations">
+  <meta property="twitter:description" content="Book comfortable flights and explore world-class destinations with AeroTravel.">
+  <meta property="twitter:image" content="Pictures/Images cityies/London.png">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" aria-hidden="true">
+    <div class="spinner"></div>
+    <div id="progress-text" class="progress-text">LOADING EXPERIENCES 0%</div>
+  </div>
+
+  <!-- Background 3D Scroll Canvas -->
+  <canvas id="animation-canvas" aria-hidden="true"></canvas>
+  <!-- Background Image Dimming Overlay -->
+  <div id="bg-overlay" aria-hidden="true"></div>
+
+  <!-- Overlay Content Container -->
+  <div class="content-wrapper">
+    
+    <!-- Navigation Bar -->
+    <header class="nav-container" role="banner">
+      <nav class="nav-content" aria-label="Main Navigation">
+        <a href="#home" class="logo" aria-label="AeroTravel Homepage">
+          <div class="logo-icon">
+            <div class="logo-inner"></div>
+          </div>
+          <span class="logo-text">AEROTRAVEL</span>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#destinations" class="nav-link">Destinations</a>
+          <a href="#stats" class="nav-link">About Us</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <a href="#services" class="btn-glass nav-btn">Book Now</a>
+
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home" class="hero-section" role="main">
+      <!-- Floating Glass Tags -->
+      <div class="floating-tag tag-left-1">
+        <span>SkyPass</span>
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+        </svg>
+      </div>
+      <div class="floating-tag tag-left-2">
+        <span>AirLuxe</span>
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 16V8a2 2 0 0 1-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        </svg>
+      </div>
+
+      <div class="floating-tag tag-right-1">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="8" cy="8" r="6" />
+          <path d="M18 12h.01" />
+          <path d="M20 16h.01" />
+          <path d="M16 20h.01" />
+          <path d="M12 18h.01" />
+        </svg>
+        <span>JetExpress</span>
+      </div>
+      <div class="floating-tag tag-right-2">
+        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M11.767 19.089c4.924.868 6.14-6.025 1.216-6.894m-1.216 6.894L5.86 18.047m5.908 1.042l.347 1.97m-6.255-3.012l-.347-1.97m.347 1.97l6.255 1.042m0-6.894c4.137.729 4.966-4.636 1.488-5.324M11.767 12.195L6.442 11.25m5.325.945L11.42 10.22m-5.325 1.03l-.347-1.97m.347 1.97l5.325.945m-.347-1.97L5.5 10.305m5.587-4.088l.347 1.97m-6.255-3.012l.347 1.97m0 0L11.087 8.187" />
+        </svg>
+        <span>FlyGlobal</span>
+      </div>
+
+      <div class="hero-body">
+        <div class="badge">PREMIUM FLIGHT EXPERIENCES</div>
+
+        <h1 class="hero-title animate-on-scroll slide-up">
+          Explore the World <br>
+          <span class="serif-italic">from Above</span>.
+        </h1>
+
+        <p class="hero-subtitle animate-on-scroll slide-up" style="transition-delay: 0.1s">
+          Discover unforgettable international destinations, comfortable luxury flights, and seamless travel experiences. Whether you are planning a relaxing vacation, a business trip, or a new adventure, we help you reach your destination safely and comfortably.
+        </p>
+
+        <div class="hero-actions animate-on-scroll slide-up" style="transition-delay: 0.2s">
+          <a href="#services" class="btn-primary" style="text-decoration: none;">
+            Get Started
+            <svg class="icon-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#destinations" class="btn-secondary" style="text-decoration: none;">Explore More</a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Travel Services Section -->
+    <section id="services" class="section">
+      <div class="section-header animate-on-scroll slide-up">
+        <h2 class="section-title">
+          Everything You <br> Need for a <span class="serif-italic">Better Journey</span>.
+        </h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="grid-4">
+        <!-- Card 1 -->
+        <article class="glass-card animate-on-scroll slide-up" style="transition-delay: 0s">
+          <div class="card-icon-row">
+            <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.7 5.2c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z" />
+            </svg>
+            <h3>London Flights</h3>
+          </div>
+          <p>Find and book flights to London quickly and easily with premium in-flight amenities.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="glass-card animate-on-scroll slide-up" style="transition-delay: 0.1s">
+          <div class="card-icon-row">
+            <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <h3>Paris Getaways</h3>
+          </div>
+          <p>Enjoy spacious seating, quality meals, entertainment, and attentive service on flights to Paris.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="glass-card animate-on-scroll slide-up" style="transition-delay: 0.2s">
+          <div class="card-icon-row">
+            <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            <h3>Tokyo Expeditions</h3>
+          </div>
+          <p>Get professional support with ticket changes, baggage information, and travel documents to Tokyo.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="glass-card animate-on-scroll slide-up" style="transition-delay: 0.3s">
+          <div class="card-icon-row">
+            <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.0 11.2 2 11.6 2 12v4c0 .6.4 1 1 1h2" />
+              <circle cx="7" cy="17" r="2" />
+              <circle cx="17" cy="17" r="2" />
+            </svg>
+            <h3>Dubai Transfers</h3>
+          </div>
+          <p>Arrange safe and convenient airport transfers and luxury transit services in Dubai.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section id="destinations" class="section">
+      <div class="header-split animate-on-scroll slide-up">
+        <div class="destinations-header">
+          <h2 class="section-heading-large">
+            Discover Popular <span class="serif-italic">Destinations</span>.
+          </h2>
+          <p class="section-subtext">
+            Explore beautiful global cities, world-famous landmarks, and unforgettable travel experiences.
+          </p>
+        </div>
+
+        <a href="#destinations" class="link-arrow">
+          <span>VIEW ALL DESTINATIONS</span>
+          <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Image Grid -->
+      <div class="grid-4 image-grid">
+        <div class="glass-card image-card animate-on-scroll scale-up" style="transition-delay: 0s">
+          <img src="Pictures/Images cityies/London.png" alt="London Flight Destination - AeroTravel" class="card-bg-img" loading="lazy">
+          <div class="card-gradient bg-grad-1"></div>
+          <span class="card-label">London</span>
+        </div>
+        <div class="glass-card image-card animate-on-scroll scale-up" style="transition-delay: 0.1s">
+          <img src="Pictures/Images cityies/Parish.png" alt="Paris Flight Destination - AeroTravel" class="card-bg-img" loading="lazy">
+          <div class="card-gradient bg-grad-2"></div>
+          <span class="card-label">Paris</span>
+        </div>
+        <div class="glass-card image-card animate-on-scroll scale-up" style="transition-delay: 0.2s">
+          <img src="Pictures/Images cityies/Tokyo.png" alt="Tokyo Flight Destination - AeroTravel" class="card-bg-img" loading="lazy">
+          <div class="card-gradient bg-grad-3"></div>
+          <span class="card-label">Tokyo</span>
+        </div>
+        <div class="glass-card image-card animate-on-scroll scale-up" style="transition-delay: 0.3s">
+          <img src="Pictures/Images cityies/Dubair.png" alt="Dubai Flight Destination - AeroTravel" class="card-bg-img" loading="lazy">
+          <div class="card-gradient bg-grad-4"></div>
+          <span class="card-label">Dubai</span>
+        </div>
+      </div>
+
+      <!-- Aviation Stats Section -->
+      <div id="stats" class="numbers-container">
+        <div class="grid-4 stats-grid">
+          <div class="stat-item animate-on-scroll slide-up" style="transition-delay: 0s">
+            <div class="stat-num">150+</div>
+            <div class="stat-divider"></div>
+            <h4>Global Destinations</h4>
+            <p>Connecting travelers across top international hubs with world-class comfort and safety.</p>
+          </div>
+
+          <div class="stat-item animate-on-scroll slide-up" style="transition-delay: 0.1s">
+            <div class="stat-num">2.5M+</div>
+            <div class="stat-divider"></div>
+            <h4>Happy Tourists</h4>
+            <p>Providing unforgettable journeys and seamless flight experiences to travelers worldwide.</p>
+          </div>
+
+          <div class="stat-item animate-on-scroll slide-up" style="transition-delay: 0.2s">
+            <div class="stat-num">98%</div>
+            <div class="stat-divider"></div>
+            <h4>On-Time Departures</h4>
+            <p>Guaranteed schedule precision and hassle-free transit for every single flight.</p>
+          </div>
+
+          <div class="stat-item animate-on-scroll slide-up" style="transition-delay: 0.3s">
+            <div class="stat-num">15+</div>
+            <div class="stat-divider"></div>
+            <h4>Years in Aviation</h4>
+            <p>Dedicated industry experience delivering premium in-flight hospitality and service excellence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="footer" role="contentinfo">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand animate-on-scroll slide-up" style="transition-delay: 0s">
+          <div class="brand-logo">
+            <div class="zap-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg>
+            </div>
+            <div>
+              <div class="brand-title">AeroTravel</div>
+              <div class="brand-sub">PREMIUM AVIATION & TRAVEL</div>
+            </div>
+          </div>
+          <p class="brand-desc">
+            Empowering global travelers with seamless flight bookings, luxury in-flight hospitality, and unforgettable international travel experiences.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="AeroTravel Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="AeroTravel LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect width="4" height="12" x="2" y="9" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="AeroTravel Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Columns -->
+        <div class="footer-links">
+          <div class="footer-col animate-on-scroll slide-up" style="transition-delay: 0.1s">
+            <div class="col-head">
+              <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="m7.5 4.27 9 5.15a1 1 0 0 1 .5 1.02l-1.32 6.55a1 1 0 0 1-.77.78l-6.55 1.32a1 1 0 0 1-1.02-.5L2.19 9.6a1 1 0 0 1 .5-1.02l6.55-1.32a1 1 0 0 1 .78.77l1.32 6.55" />
+              </svg>
+              <h4>Services</h4>
+            </div>
+            <a href="#services">Flight Booking</a>
+            <a href="#services">First Class Suites</a>
+            <a href="#services">Airport Transfers</a>
+            <a href="#services">Travel Insurance</a>
+            <a href="#services">VIP Lounges</a>
+            <a href="#services">Private Charters</a>
+          </div>
+
+          <div class="footer-col animate-on-scroll slide-up" style="transition-delay: 0.2s">
+            <div class="col-head">
+              <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
+                <path d="M9 22v-4h6v4" />
+              </svg>
+              <h4>Destinations</h4>
+            </div>
+            <a href="#destinations">London Flights</a>
+            <a href="#destinations">Paris Tours</a>
+            <a href="#destinations">Tokyo Trips</a>
+            <a href="#destinations">Dubai Vacations</a>
+            <a href="#destinations">All Destinations</a>
+          </div>
+
+          <div class="footer-col animate-on-scroll slide-up" style="transition-delay: 0.3s">
+            <div class="col-head">
+              <svg class="icon-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+              <h4>Support & Info</h4>
+            </div>
+            <a href="#contact">Baggage Policy</a>
+            <a href="#contact">Flight Status</a>
+            <a href="#contact">Help Center</a>
+            <a href="#contact">Travel Guides</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom animate-on-scroll slide-up" style="transition-delay: 0.4s">
+        <div class="bottom-left">
+          <span>© 2026 AeroTravel Aviation. All rights reserved.</span>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>All flight systems operational</span>
+          </div>
+        </div>
+
+        <div class="bottom-right">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
